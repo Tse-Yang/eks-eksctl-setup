@@ -81,7 +81,7 @@ We see the 2 desired nodes with their private IPs, region and Kubernetes version
 
 **EKS cluster**: in the AWS console, we open *Amazon EKS > Clusters > demo-cluster*. The status is **Active**.
 
-<img src="images/amazon-eks-demo-cluster-created.png" alt="EKS cluster in the console" width="600">
+<img src="images/amazon-eks-demo-cluster-created.png" alt="EKS cluster in the console" width="600"> <br><br>
 
 **Nodes**: under the *Compute* tab, there are 2 `t3.small` On-Demand instances managed by the `demo-nodes` node group.
 
