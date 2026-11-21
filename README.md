@@ -59,8 +59,6 @@ We create 2 nodes and let the node group scale between 1 and 3 nodes (`--nodes`,
 
 <img src="images/create-cluster-with-eksctl.png" alt="eksctl create cluster command" width="600">
 
-`eksctl` picks three availability zones and creates a dedicated VPC, `eksctl-demo-cluster/VPC`, with a public and a private subnet in each one.
-
 The command takes around 15 minutes. It deploys one CloudFormation stack for the cluster and one for the node group, creates the add-ons, and saves a kubeconfig locally so `kubectl` can talk to the new cluster.
 
 <img src="images/cluster-created-using-ekstcl.png" alt="eksctl create cluster output" width="600">
@@ -81,11 +79,13 @@ We see the 2 desired nodes with their private IPs, region and Kubernetes version
 
 **EKS cluster**: in the AWS console, we open *Amazon EKS > Clusters > demo-cluster*. The status is **Active**.
 
-<img src="images/amazon-eks-demo-cluster-created.png" alt="EKS cluster in the console" width="600"> <br><br>
+<img src="images/amazon-eks-demo-cluster-created.png" alt="EKS cluster in the console" width="600">
+
+`eksctl` picks three availability zones and creates a dedicated VPC, `eksctl-demo-cluster/VPC`, with a public and a private subnet in each one.
 
 **Nodes**: under the *Compute* tab, there are 2 `t3.small` On-Demand instances managed by the `demo-nodes` node group.
 
-<img src="images/demo-cluster-nodes.png" alt="EKS nodes" width="600"><br><br>
+<img src="images/demo-cluster-nodes.png" alt="EKS nodes" width="600">
 
 **Workloads**: under *Resources > Pods* we see our cluster running these system components:
 
