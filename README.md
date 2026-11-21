@@ -54,16 +54,7 @@ eksctl create cluster \
   --nodes 2 --nodes-min 1 --nodes-max 3 \
   --with-oidc
 ```
-
-| Option | Meaning |
-| --- | --- |
-| `--name` | Name of the EKS cluster |
-| `--version` | Kubernetes version |
-| `--region` | AWS region to create everything in |
-| `--nodegroup-name` | Name of the managed node group |
-| `--node-type` | EC2 instance type of the worker nodes |
-| `--nodes`, `--nodes-min`, `--nodes-max` | Desired, minimum and maximum number of nodes |
-| `--with-oidc` | Creates an OIDC provider for the cluster (needed for IAM roles for service accounts) |
+We create 2 nodes and let the node group scale between 1 and 3 nodes (`--nodes`, `--nodes-min`, `--nodes-max`). We also add `--with-oidc`, which creates an OIDC provider for the cluster so it can use IAM roles for service accounts.
 
 ![eksctl create cluster command](images/create-cluster-with-eksctl.png)
 
