@@ -85,7 +85,7 @@ We see the 2 desired nodes with their private IPs, region and Kubernetes version
 
 **Nodes**: under the *Compute* tab, there are 2 `t3.small` On-Demand instances managed by the `demo-nodes` node group.
 
-<img src="images/demo-cluster-nodes.png" alt="EKS nodes" width="600">
+<img src="images/demo-cluster-nodes.png" alt="EKS nodes" width="600"><br><br>
 
 **Workloads**: under *Resources > Pods* we see our cluster running these system components:
 
